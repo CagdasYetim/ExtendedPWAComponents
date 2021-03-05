@@ -1,5 +1,8 @@
+import { PwaHeaderComponent } from './pwa-header/pwa-header.component';
+import { PwaHeaderModule } from './pwa-header/pwa-header.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +11,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PwaHeaderModule,
+    RouterModule.forRoot([
+      { path: '', component: PwaHeaderComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

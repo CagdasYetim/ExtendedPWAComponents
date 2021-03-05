@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ExtendedPWAComponents"
+  "defaultProject": "ExtendedPWAComponents",
+  "cli": {
+    "analytics": "01caf763-6efc-4af1-a05a-085a3874b24a"
+  }
 }
