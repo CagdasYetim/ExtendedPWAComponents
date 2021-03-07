@@ -38,47 +38,35 @@ $color-black: #000;
     cursor: pointer;
   }
 
-  &__background{
-    position: fixed;
-    width: 3rem;
-    height: 6rem;
-    left: -3rem;
-    bottom: 50%;
-    z-index: 1000;
-    background-color: #28b485;
-    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-
   &__nav{
     position: fixed;
     z-index: 1250;
     height: 100%;
     top: -100%;
+    left: 0;
     transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+    background-color: $color-primary-light;
   }
 
   &__list{
     list-style: none;
     position: relative;
     padding: 0;
+    margin: 0;
   }
 
   &__item{
-    margin: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    &:hover{
+      background-color: $color-tertiary-light;
+    }
   }
 
   &__link{
     text-decoration: none;
     padding:0.5rem;
     color: #5643fa;
-    &:hover{
-      background-color: $color-tertiary-light;
-    }
-  }
-
-
-  &__checkbox:checked ~ &__background{
-    transform: scale(10,100);
   }
 
   &__checkbox:checked ~ &__nav{
