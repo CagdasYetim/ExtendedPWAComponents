@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { PwaHeaderComponent } from './pwa-header.component';
 
 
@@ -7,7 +8,8 @@ import { PwaHeaderComponent } from './pwa-header.component';
 @NgModule({
   declarations: [PwaHeaderComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     PwaHeaderComponent

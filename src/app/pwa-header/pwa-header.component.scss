@@ -1,19 +1,6 @@
-// COLORS
-$color-primary: #55c57a;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
-
 $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 
-$color-tertiary-light: #2998ff;
-$color-tertiary-dark: #5643fa;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-$color-grey-dark: #777;
-$color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
 $color-white: #fff;
@@ -22,30 +9,42 @@ $color-black: #000;
 
 .navigation {
 
+
+    &__sticky{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1500;
+    background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
+  }
+
+  &__sticky-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
   &__checkbox{
     display: none;
   }
 
   &__button{
-    background-color: #ff7730;
-    width: 3rem;
-    height: 3rem;
-    position: fixed;
-    border-radius: 50%;
-    left: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 1500;
     cursor: pointer;
   }
 
   &__nav{
     position: fixed;
     z-index: 1250;
+    min-width: 15%;
     height: 100%;
     top: -100%;
     left: 0;
     transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
-    background-color: $color-primary-light;
+    box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
   }
 
   &__list{
@@ -58,19 +57,21 @@ $color-black: #000;
   &__item{
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
+    text-align: center;
+    text-shadow: #000;
     &:hover{
-      background-color: $color-tertiary-light;
+      background-color: $color-white;
     }
   }
 
   &__link{
     text-decoration: none;
     padding:0.5rem;
-    color: #5643fa;
+    color:$color-black;
   }
 
   &__checkbox:checked ~ &__nav{
-    top: 0;
+    top: 2.5rem;
   }
 
   &__icon {
@@ -105,20 +106,6 @@ $color-black: #000;
 
   &__button:hover &__icon::after {
       top: 1rem;
-  }
-
-  &__checkbox:checked + &__button &__icon {
-      background-color: transparent;
-  }
-
-  &__checkbox:checked + &__button &__icon::before {
-      top: 0;
-      transform: rotate(135deg);
-  }
-
-  &__checkbox:checked + &__button &__icon::after {
-      top: 0;
-      transform: rotate(-135deg);
   }
 
 }

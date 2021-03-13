@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pwa-header',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pwa-header.component.scss']
 })
 export class PwaHeaderComponent implements OnInit {
+
+  @Input('navItems') navItems !: {name:string, url?:string}[];
 
   constructor() { }
 

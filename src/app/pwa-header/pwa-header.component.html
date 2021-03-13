@@ -1,30 +1,24 @@
 <div class="navigation">
   <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
-  <label for="navi-toggle" class="navigation__button">
-      <span class="navigation__icon">&nbsp;</span>
-  </label>
+
+  <div class="navigation__sticky">
+    <div class="navigation__sticky-container">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__icon-container">
+        <ng-content select="[icon]"></ng-content>
+      </div>
+      <div class="navigation__logo">
+        <ng-content select="[logo]"></ng-content>
+      </div>
+    </div>
+  </div>
 
   <nav class="navigation__nav">
-      <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link">About Natoussssssssssssssssssssss</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Your benfits</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">About Natous</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Your benfits</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">About Natous</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Your benfits</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Popular tours</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Book now</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">About Natous</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Your benfits</a></li>
+      <ul class="navigation__list" *ngFor="let navItem of navItems; let i =index">
+          <li class="navigation__item"><a class="navigation__link" routerLink="{{navItem.url}}" routerLinkActive="router-link-active" >{{navItem.name}}</a></li>
       </ul>
   </nav>
-
 </div>
