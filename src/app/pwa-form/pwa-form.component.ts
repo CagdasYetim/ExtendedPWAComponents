@@ -8,13 +8,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PwaFormComponent implements OnInit {
   email = new FormControl('', [Validators.required, Validators.email]);
-  hide = true;
-  results : {fieldName:string,fieldValue:any}[] =[];
   toSend !: boolean;
 
   @Input('formController') componentController !: {
     head?:string ,
     buttonName:string,
+    buttonMethod() : any[],
     fields : {
       fieldName:string,
       label:string,
@@ -26,7 +25,7 @@ export class PwaFormComponent implements OnInit {
     }[]
   };
 
-  @Output('result') resultEmitter = new EventEmitter<{fieldName:string,fieldValue:any}[]>();
+  @Output('result') resultEmitter = new EventEmitter<{fieldName:string,fieldValue:string}[]>();
 
   constructor() { }
 
@@ -35,17 +34,8 @@ export class PwaFormComponent implements OnInit {
   }
 
   clickButton (){
-    this.componentController.fields.forEach(e => {
-      if(!e.control.invalid){
-        this.results.push({fieldName:e.fieldName ,fieldValue: e.control.value});
-        this.toSend = true;
-      }
-      else
-        this.toSend = false;
-    });
-    if(this.toSend){
-      this.resultEmitter.emit(this.results);
-    }
+    let results :any[] = this.componentController.buttonMethod();
+    this.resultEmitter.emit(results);
   }
 
 }

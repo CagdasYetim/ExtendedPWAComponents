@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   componentController !: {
     head?:string ,
     buttonName:string,
+    buttonMethod():any[],
     fields : {
       fieldName:string,
       label:string,
@@ -31,15 +32,31 @@ export class AppComponent implements OnInit {
     this.componentController = {
       head : "Cagdas" ,
       buttonName : "Register",
+      buttonMethod : function():any[]{
+        let results:{fieldName:string,fieldValue:string}[] =[];
+        for(var i in this.fields){
+          if(!this.fields[i].control.invalid){
+            results.push({fieldName:this.fields[i].fieldName ,fieldValue: this.fields[i].control.value});
+          }
+          else{
+            return [];
+          }
+        }
+        return results;
+      },
       fields : [
-        {fieldName:"first" , label:"FirstLabel", isRequired:true,control : new FormControl('',[Validators.email]),errorMessage:"testError",fieldType:"password"}
+        {fieldName:"first" , label:"FirstLabel", isRequired:true,control : new FormControl(''),errorMessage:"testError",fieldType:"password"}
         ,{fieldName:"Second" , label:"SecondLabel", isRequired:true,control : new FormControl('',Validators.required),errorMessage:"testErrorSecond"}
       ]
     }
   }
 
-  getResult(object :{fieldName:string,fieldValue:string}[] ){
-    console.log(object);
+  getResult(object :any[] ){
+    if(object){
+      object.forEach(e =>{
+        console.log(e.fieldValue);
+      });
+    }
   }
 
 }
