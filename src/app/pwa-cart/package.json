@@ -1,8 +1,8 @@
 {
-  "es2015": "dist\\fesm2015\\bit-pwa-cart.js",
-  "esm2015": "dist\\esm2015\\bit-pwa-cart.js",
-  "fesm2015": "dist\\fesm2015\\bit-pwa-cart.js",
-  "module": "dist\\fesm2015\\bit-pwa-cart.js",
-  "typings": "dist\\bit-pwa-cart.d.ts",
-  "metadata": "dist\\bit-pwa-cart.metadata.json"
+  "es2015": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.js",
+  "esm2015": "dist\\esm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.js",
+  "fesm2015": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.js",
+  "module": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.js",
+  "typings": "dist\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.d.ts",
+  "metadata": "dist\\bit-cagdas.pwaextendedcomponentscollection.pwa-cart.metadata.json"
 }

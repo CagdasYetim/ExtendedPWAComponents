@@ -1,18 +1,19 @@
 <mat-card class="card">
-  <mat-card-header>
-    <!--https://material.angular.io/assets/img/examples/shiba2.jpg-->
-    <div mat-card-avatar> <img mat-card-image [src]="testSrc" alt="Photo of a Shiba Inu"> </div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  <mat-card-header class="card__header">
+    <div mat-card-avatar> <img mat-card-image [src]="cartController.avatarImage"> </div>
+    <mat-card-title>{{cartController.headerTitle}}</mat-card-title>
+    <mat-card-subtitle *ngIf="cartController.headerSubTitle" >{{cartController.headerSubTitle}}</mat-card-subtitle>
   </mat-card-header>
+  <img mat-card-image *ngIf="cartController.cartImage" [src]="cartController.cartImage">
   <mat-card-content>
     <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
+      {{cartController.content}}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button ><mat-icon *ngIf="false"></mat-icon>SHARE</button>
+    <button mat-raised-button *ngFor="let button of cartController.buttons" (click)="button.buttonMethod()">
+      <mat-icon *ngIf="button.icon">{{button.icon}}</mat-icon>
+      {{button.name?button.name : ''}}
+    </button>
   </mat-card-actions>
 </mat-card>

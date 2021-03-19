@@ -6,7 +6,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./pwa-cart.component.scss']
 })
 export class PwaCartComponent implements OnInit {
-  @Input('testSrc') testSrc !:string;
+  @Input('cartController') cartController !:
+    {
+      headerTitle:string,
+      headerSubTitle?:string,
+      avatarImage:string,
+      cartImage?:string,
+      content:string,
+      buttons : {
+        name?:string,
+        icon?:string,
+        buttonMethod() : any
+      }[]
+    };
 
   constructor() { }
 

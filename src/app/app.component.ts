@@ -26,6 +26,20 @@ export class AppComponent implements OnInit {
     }[]
   }
 
+  cartController !:
+    {
+      headerTitle:string,
+      headerSubTitle?:string,
+      avatarImage:string,
+      cartImage?:string,
+      content:string,
+      buttons : {
+        name?:string,
+        icon?:string,
+        buttonMethod() : any
+      }[]
+    };
+
   ngOnInit(): void {
     this.items.push({name:"test",url:"/test"});
 
@@ -47,6 +61,18 @@ export class AppComponent implements OnInit {
       fields : [
         {fieldName:"first" , label:"FirstLabel", isRequired:true,control : new FormControl(''),errorMessage:"testError",fieldType:"password"}
         ,{fieldName:"Second" , label:"SecondLabel", isRequired:true,control : new FormControl('',Validators.required),errorMessage:"testErrorSecond"}
+      ]
+    };
+    this.cartController = {
+      headerTitle:"CartTitle",
+      avatarImage:"../../assets/asd.jpg",
+      headerSubTitle : "this is a fucking sub title",
+      content : "this is a abuk sabuk content this is a abuk sabuk content this is a abuk sabuk content this is a abuk sabuk content",
+      buttons : [
+        {
+          icon : "favorite",
+          buttonMethod : ()=>{console.log("cagdas Yapar olum");}
+        }
       ]
     }
   }
