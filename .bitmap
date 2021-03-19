@@ -77,28 +77,5 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "cagdas.pwaextendedcomponentscollection/services@1.0.9": {
-        "files": [
-            {
-                "relativePath": "src/app/services/package.json",
-                "test": false,
-                "name": "package.json"
-            },
-            {
-                "relativePath": "src/app/services/services.module.ts",
-                "test": false,
-                "name": "services.module.ts"
-            },
-            {
-                "relativePath": "src/app/services/test.services.ts",
-                "test": false,
-                "name": "test.services.ts"
-            }
-        ],
-        "mainFile": "src/app/services/services.module.ts",
-        "trackDir": "src/app/services",
-        "origin": "AUTHORED",
-        "exported": true
-    },
     "version": "14.8.8"
 }
