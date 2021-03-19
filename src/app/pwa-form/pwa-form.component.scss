@@ -1,0 +1,30 @@
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+
+.container-register{
+  margin: 10rem auto;
+
+  max-width: 30rem;
+  border: 1px solid $color-secondary-dark;
+  border-radius: 16px;
+  background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
+
+  @media (max-width:370px)  {
+    margin: 1rem 0.5rem;
+  }
+}
+
+.register{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 5rem 4rem;
+
+  &__header{
+    text-align: center;
+    margin-top: 2rem;
+  }
+}

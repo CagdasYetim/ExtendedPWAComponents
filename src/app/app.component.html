@@ -1,1 +1,10 @@
-<app-pwa-header></app-pwa-header>
+<!--
+  <app-pwa-header [navItems]="items">
+  <div logo>this is my logo</div>
+  <div icon>this is my icons</div>
+</app-pwa-header>
+-->
+
+
+<app-pwa-form [formController]="componentController" (result)="getResult($event)"></app-pwa-form>
+

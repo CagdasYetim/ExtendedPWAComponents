@@ -1,0 +1,12 @@
+<div class="container-register">
+  <ng-content select="[icon]"></ng-content>
+  <h1 class="register__header">{{componentController.head}}</h1>
+  <form class="register">
+      <mat-form-field *ngFor="let field of componentController.fields" >
+        <mat-label>{{field.label}}</mat-label>
+        <input matInput [placeholder] = "field.placeholder ? field.placeholder : ' '" [formControl]="field.control" [required]="field.isRequired" [type]="field.fieldType? field.fieldType:'text'">
+        <mat-error *ngIf="field.control.invalid">{{field.errorMessage}}</mat-error>
+      </mat-form-field>
+    <button mat-raised-button color="primary" (click)="clickButton()">Register</button>
+  </form>
+</div>

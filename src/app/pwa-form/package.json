@@ -1,0 +1,8 @@
+{
+  "es2015": "dist\\fesm2015\\bit-pwa-form.js",
+  "esm2015": "dist\\esm2015\\bit-pwa-form.js",
+  "fesm2015": "dist\\fesm2015\\bit-pwa-form.js",
+  "module": "dist\\fesm2015\\bit-pwa-form.js",
+  "typings": "dist\\bit-pwa-form.d.ts",
+  "metadata": "dist\\bit-pwa-form.metadata.json"
+}
