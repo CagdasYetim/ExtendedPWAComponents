@@ -1,0 +1,15 @@
+.card {
+  max-width: 15rem;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__header{
+  }
+}
+
+
+.mat-card-image:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

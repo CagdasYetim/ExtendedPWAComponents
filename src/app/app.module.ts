@@ -1,3 +1,4 @@
+import { PwaCartModule } from './pwa-cart/pwa-cart.module';
 import { PwaFormModule } from './pwa-form/pwa-form.module';
 import { PwaHeaderComponent } from './pwa-header/pwa-header.component';
 import { PwaHeaderModule } from './pwa-header/pwa-header.module';
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     PwaHeaderModule,
     PwaFormModule,
+    PwaCartModule,
     MatSliderModule,
     RouterModule.forRoot([
       { path: '', component: PwaHeaderComponent },
