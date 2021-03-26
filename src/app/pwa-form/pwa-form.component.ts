@@ -22,6 +22,11 @@ export class PwaFormComponent implements OnInit {
       control:FormControl,
       errorMessage?:string,
       fieldType?:string
+    }[],
+    links?:{
+      url:string,
+      linkName:string,
+      color?:string
     }[]
   };
 

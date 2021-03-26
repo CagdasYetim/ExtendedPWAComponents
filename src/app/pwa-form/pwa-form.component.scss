@@ -3,7 +3,7 @@ $color-secondary-light: #ffb900;
 $color-secondary-dark: #ff7730;
 
 
-.container-register{
+.container-form{
   margin: 10rem auto;
 
   max-width: 30rem;
@@ -16,7 +16,7 @@ $color-secondary-dark: #ff7730;
   }
 }
 
-.register{
+.form{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,5 +26,14 @@ $color-secondary-dark: #ff7730;
   &__header{
     text-align: center;
     margin-top: 2rem;
+  }
+  &__extendedLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      margin-top: 1rem;
+      text-decoration: none;
+    }
   }
 }

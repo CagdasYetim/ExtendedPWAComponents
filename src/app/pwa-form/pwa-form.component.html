@@ -1,12 +1,17 @@
-<div class="container-register">
+<div class="container-form">
   <ng-content select="[icon]"></ng-content>
-  <h1 class="register__header">{{componentController.head}}</h1>
-  <form class="register">
+  <h1 class="form__header">{{componentController.head}}</h1>
+  <form class="form">
       <mat-form-field *ngFor="let field of componentController.fields" >
         <mat-label>{{field.label}}</mat-label>
         <input matInput [placeholder] = "field.placeholder ? field.placeholder : ' '" [formControl]="field.control" [required]="field.isRequired" [type]="field.fieldType? field.fieldType:'text'">
         <mat-error *ngIf="field.control.invalid">{{field.errorMessage}}</mat-error>
       </mat-form-field>
-    <button mat-raised-button color="primary" (click)="clickButton()">Register</button>
+    <button mat-raised-button color="primary" (click)="clickButton()">{{componentController.buttonName}}</button>
+
+    <div class="form__extendedLinks">
+      <a *ngFor=" let elem of componentController.links" routerLink="{{elem.url}}" [ngStyle]="{'color':elem.color}">{{elem.linkName}}</a>
+    </div>
+
   </form>
 </div>

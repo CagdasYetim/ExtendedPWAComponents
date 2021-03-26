@@ -23,6 +23,11 @@ export class AppComponent implements OnInit {
       control:FormControl,
       errorMessage?:string,
       fieldType?:string;
+    }[],
+    links?:{
+      url:string,
+      linkName:string,
+      color?:string
     }[]
   }
 
@@ -61,7 +66,12 @@ export class AppComponent implements OnInit {
       fields : [
         {fieldName:"first" , label:"FirstLabel", isRequired:true,control : new FormControl(''),errorMessage:"testError",fieldType:"password"}
         ,{fieldName:"Second" , label:"SecondLabel", isRequired:true,control : new FormControl('',Validators.required),errorMessage:"testErrorSecond"}
-      ]
+      ],
+    links:[{
+      url:"/",
+      linkName:"Register",
+      color:"red"
+    }]
     };
     this.cartController = {
       headerTitle:"CartTitle",

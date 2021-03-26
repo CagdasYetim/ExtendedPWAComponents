@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +16,8 @@ import { PwaFormComponent } from './pwa-form.component';
     BrowserAnimationsModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   exports : [
     PwaFormComponent
