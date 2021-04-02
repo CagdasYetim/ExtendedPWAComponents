@@ -7,7 +7,7 @@
         <input matInput [placeholder] = "field.placeholder ? field.placeholder : ' '" [formControl]="field.control" [required]="field.isRequired" [type]="field.fieldType? field.fieldType:'text'">
         <mat-error *ngIf="field.control.invalid">{{field.errorMessage}}</mat-error>
       </mat-form-field>
-    <button mat-raised-button color="primary" (click)="clickButton()">{{componentController.buttonName}}</button>
+    <button mat-raised-button color="primary" type="button" (click)="clickButton()">{{componentController.buttonName}}</button>
 
     <div class="form__extendedLinks">
       <a *ngFor=" let elem of componentController.links" routerLink="{{elem.url}}" [ngStyle]="{'color':elem.color}">{{elem.linkName}}</a>
