@@ -1,3 +1,4 @@
+import { PwaFloatbuttonModule } from './pwa-floatbutton/pwa-floatbutton.module';
 import { PwaAutoinputModule } from './pwa-autoinput/pwa-autoinput.module';
 import { PwaCheckboxesModule } from './pwa-checkboxes/pwa-checkboxes.module';
 import { PwaImageModule } from './pwa-image/pwa-image.module';
@@ -25,6 +26,7 @@ import { AppComponent } from './app.component';
     PwaCheckboxesModule,
     PwaAutoinputModule,
     MatSliderModule,
+    PwaFloatbuttonModule,
     RouterModule.forRoot([
       { path: '', component: PwaHeaderComponent }
     ])

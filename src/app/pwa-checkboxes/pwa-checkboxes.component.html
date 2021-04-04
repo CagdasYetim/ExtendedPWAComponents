@@ -6,7 +6,7 @@
                   [color]="task.color"
                   [indeterminate]="someComplete()"
                   (change)="setAll($event.checked)">
-      {{task.name}}
+      {{task.label}}
     </mat-checkbox>
   </span>
   <span class="checkbox-list-section">
@@ -15,7 +15,7 @@
         <mat-checkbox [(ngModel)]="subtask.completed"
                       [color]="subtask.color"
                       (ngModelChange)="updateAllComplete()">
-          {{subtask.name}}
+          {{subtask.label}}
         </mat-checkbox>
       </li>
     </ul>

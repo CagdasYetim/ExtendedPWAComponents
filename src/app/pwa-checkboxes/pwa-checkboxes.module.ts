@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PwaCheckboxesComponent } from './pwa-checkboxes.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports:[
     PwaCheckboxesComponent

@@ -1,0 +1,31 @@
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+.float{
+  border-radius: 100%;
+  min-width: 3rem;
+  min-height: 3rem;
+  border: 0.1rem solid white;
+
+  background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  &__icon{
+    width: 1rem;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .float{
+    min-width: 2rem;
+    min-height: 2rem;
+
+    &__icon{
+      width: 0.75rem;
+    }
+
+  }
+}

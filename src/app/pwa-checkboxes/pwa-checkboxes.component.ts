@@ -3,6 +3,7 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 export interface Task {
   name: string;
+  label:string;
   completed: boolean;
   color: ThemePalette;
   subtasks?: Task[];
