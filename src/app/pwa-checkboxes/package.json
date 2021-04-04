@@ -1,0 +1,8 @@
+{
+  "es2015": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.js",
+  "esm2015": "dist\\esm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.js",
+  "fesm2015": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.js",
+  "module": "dist\\fesm2015\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.js",
+  "typings": "dist\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.d.ts",
+  "metadata": "dist\\bit-cagdas.pwaextendedcomponentscollection.pwa-checkboxes.metadata.json"
+}

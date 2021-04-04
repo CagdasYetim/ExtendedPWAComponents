@@ -1,0 +1,6 @@
+<img class="image"
+  [ngStyle]="{'max-height': this.innerWidth>500 ? imgController.height ? imgController.height : '100%' : '25%',
+              'max-width' : this.innerWidth>500 ? imgController.width ? imgController.width : '100%' : '100%'
+            }"
+  [src]="imgController.src"
+/>

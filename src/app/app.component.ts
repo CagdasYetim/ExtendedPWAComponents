@@ -1,5 +1,14 @@
+import { ThemePalette } from '@angular/material/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+
+
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 
 @Component({
   selector: 'app-root',
@@ -10,6 +19,8 @@ export class AppComponent implements OnInit {
 
   title = 'ExtendedPWAComponents';
   items: {name:string,url?:string}[] = [];
+
+  task !: Task;
 
   componentController !: {
     head?:string ,
@@ -84,7 +95,18 @@ export class AppComponent implements OnInit {
           buttonMethod : ()=>{console.log("cagdas Yapar olum");}
         }
       ]
-    }
+    };
+
+    this.task = {
+      name: 'Indeterminate',
+      completed: false,
+      color: 'primary',
+      subtasks: [
+        {name: 'Primary', completed: false, color: 'primary'},
+        {name: 'Accent', completed: false, color: 'accent'},
+        {name: 'Warn', completed: false, color: 'warn'}
+      ]
+    };
   }
 
   getResult(object :any[] ){
@@ -93,6 +115,10 @@ export class AppComponent implements OnInit {
         console.log(e.fieldValue);
       });
     }
+  }
+
+  testCheckbox(){
+    console.log(this.task);
   }
 
 }

@@ -1,3 +1,6 @@
+import { PwaAutoinputModule } from './pwa-autoinput/pwa-autoinput.module';
+import { PwaCheckboxesModule } from './pwa-checkboxes/pwa-checkboxes.module';
+import { PwaImageModule } from './pwa-image/pwa-image.module';
 import { PwaCartModule } from './pwa-cart/pwa-cart.module';
 import { PwaFormModule } from './pwa-form/pwa-form.module';
 import { PwaHeaderComponent } from './pwa-header/pwa-header.component';
@@ -18,9 +21,12 @@ import { AppComponent } from './app.component';
     PwaHeaderModule,
     PwaFormModule,
     PwaCartModule,
+    PwaImageModule,
+    PwaCheckboxesModule,
+    PwaAutoinputModule,
     MatSliderModule,
     RouterModule.forRoot([
-      { path: '', component: PwaHeaderComponent },
+      { path: '', component: PwaHeaderComponent }
     ])
   ],
   providers: [],
