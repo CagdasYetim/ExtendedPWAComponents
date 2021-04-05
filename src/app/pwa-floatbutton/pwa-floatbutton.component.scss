@@ -6,6 +6,7 @@ $color-secondary-dark: #ff7730;
   min-width: 3rem;
   min-height: 3rem;
   border: 0.1rem solid white;
+  z-index: 50000;
 
   background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
 

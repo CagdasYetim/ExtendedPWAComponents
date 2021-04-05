@@ -39,7 +39,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "cagdas.pwaextendedcomponentscollection/pwa-cart@1.1.2": {
+    "cagdas.pwaextendedcomponentscollection/pwa-cart@1.1.9": {
         "files": [
             {
                 "relativePath": "src/app/pwa-cart/package.json",
@@ -115,7 +115,7 @@
         "origin": "AUTHORED",
         "exported": true
     },
-    "cagdas.pwaextendedcomponentscollection/pwa-floatbutton@1.1.8": {
+    "cagdas.pwaextendedcomponentscollection/pwa-floatbutton@1.1.10": {
         "files": [
             {
                 "relativePath": "src/app/pwa-floatbutton/package.json",
